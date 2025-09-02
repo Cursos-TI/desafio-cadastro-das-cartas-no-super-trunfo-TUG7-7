@@ -21,6 +21,9 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidade1;
+    float pibPerCapita1;
+
 
     // Carta 2
     char estado2[50];
@@ -30,6 +33,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidade2;
+    float pibPerCapita2;
 
     //Entrada dos dados da Carta 1
    printf("Cadastro da Carta 1:\n");
@@ -54,6 +59,11 @@ int main() {
     printf("Digite o Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    // Calculo da Densidade Demografica e PIB per Capita da Carta 1
+    densidade1 = populacao1 / area1;
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+
+
     // Entrada dos dados da Carta 2
      printf("\nCadastro da Carta 2:\n");
     printf("Digite o Estado (A-H): ");
@@ -76,6 +86,10 @@ int main() {
 
     printf("Digite o Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos2);
+    // Calculo da Densidade Demografica e PIB per Capita da Carta 2
+    densidade2 = populacao2 / area2;
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2;
+    
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
