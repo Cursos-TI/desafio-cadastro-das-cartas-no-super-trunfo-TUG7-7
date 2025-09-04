@@ -43,7 +43,7 @@ int main() {
     //Entrada dos dados da Carta 1
    printf("Cadastro da Carta 1:\n");
     printf("Digite o Estado: ");
-    scanf(" %s", &estado1);
+    scanf(" %s", estado1);
 
     printf("Digite o Codigo da Carta (ex: A01):");
     scanf("%s", codigo1);
@@ -74,8 +74,8 @@ int main() {
 
     // Entrada dos dados da Carta 2
      printf("\nCadastro da Carta 2:\n");
-    printf("Digite o Estado (A-H): ");
-    scanf(" %c", &estado2);
+    printf("Digite o Estadoa: ");
+    scanf(" %s", estado2);
 
     printf("Digite o Codigo da Carta (ex: B02): ");
     scanf("%s", codigo2);
@@ -113,14 +113,15 @@ int main() {
     printf("Super Poder: %.2f\n", superpoder2);
 
     // -------- Comparações --------
-    printf("\nComparacao de Cartas:\n");
-    printf("Populacao: Carta 1 venceu (%d)\n", (populacao1 > populacao2));
-    printf("Area: Carta 1 venceu (%d)\n", (area1 > area2));
-    printf("PIB: Carta 1 venceu (%d)\n", (pib1 > pib2));
-    printf("Pontos Turisticos: Carta 1 venceu (%d)\n", (pontosTuristicos1 > pontosTuristicos2));
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", (densidade1 < densidade2)); // menor vence
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", (pibPerCapita1 > pibPerCapita2));
-    printf("Super Poder: Carta 1 venceu (%d)\n", (superpoder1 > superpoder2));
+printf("\nComparacao de Cartas:\n");
+printf("Populacao: %s venceu\n", (populacao1 > populacao2) ? "Carta 1" : "Carta 2");
+printf("Area: %s venceu\n", (area1 > area2) ? "Carta 1" : "Carta 2");
+printf("PIB: %s venceu\n", (pib1 > pib2) ? "Carta 1" : "Carta 2");
+printf("Pontos Turisticos: %s venceu\n", (pontosTuristicos1 > pontosTuristicos2) ? "Carta 1" : "Carta 2");
+printf("Densidade Populacional: %s venceu\n", (densidade1 < densidade2) ? "Carta 1" : "Carta 2"); // menor vence
+printf("PIB per Capita: %s venceu\n", (pibPerCapita1 > pibPerCapita2) ? "Carta 1" : "Carta 2");
+printf("Super Poder: %s venceu\n", (superpoder1 > superpoder2) ? "Carta 1" : "Carta 2");
+
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -129,7 +130,7 @@ int main() {
     // Saída formatada
 
     printf("\n--- Carta 1 ---\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %s\n", estado1);
     printf("Codigo: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
     printf("Populacao: %d\n", populacao1);
@@ -138,7 +139,7 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
 
     printf("\n--- Carta 2 ---\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Codigo: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("Populacao: %d\n", populacao2);
